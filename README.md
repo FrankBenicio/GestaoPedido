@@ -11,6 +11,7 @@ Projeto desenvolvido com foco em boas práticas de arquitetura, testes automatiz
 - **TDD (Test-Driven Development)**
 - **Design Modular**
 - **Use Cases Orientados a Domínio**
+- **Middlewares para tratamento de exceção**
 
 ---
 
@@ -25,7 +26,6 @@ Projeto desenvolvido com foco em boas práticas de arquitetura, testes automatiz
 - Moq
 - FluentAssertions
 - Stryker.NET (Testes de mutação)
-- RestSharp
 - Git
 - Visual Studio / VS Code
 
