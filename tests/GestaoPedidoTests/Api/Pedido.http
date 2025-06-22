@@ -1,0 +1,70 @@
+@GestaoPedido.API_HostAddress = https://localhost:7181
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluIiwicm9sZSI6IkFkbWluIiwibmFtZWlkIjoiOWNhY2JiYWQtZmNiNS00NDZkLTlkODAtYjRhMmRlYjZkMzljIiwibmJmIjoxNzUwNjExNTE0LCJleHAiOjE3NTA2MTUxMTQsImlhdCI6MTc1MDYxMTUxNCwiaXNzIjoiR2VzdGFvUGVkaWRvU2VydmVyIiwiYXVkIjoiR2VzdGFvUGVkaWRvQXBpIn0.4vGlopQA6FwVivEXXdXg3RNzfOaArQxZDNDCDvk9fg4
+
+### Criar pedido
+POST {{GestaoPedido.API_HostAddress}}/api/pedido
+Authorization: Bearer {{token}}
+Content-Type: application/json
+Accept: application/json
+
+{
+  "clienteId": "00000000-0000-0000-0000-000000000001",
+  "itens": [
+    {
+      "produtoId": "00000000-0000-0000-0000-000000000002",
+      "quantidade": 2,
+      "precoUnitario": 49.99
+    }
+  ]
+}
+
+###
+
+### Buscar pedido por ID
+GET {{GestaoPedido.API_HostAddress}}/api/pedido/00000000-0000-0000-0000-000000000010
+Authorization: Bearer {{token}}
+Accept: application/json
+
+###
+
+### Listar pedidos com filtros (status + datas opcionais)
+GET {{GestaoPedido.API_HostAddress}}/api/pedido?pagina=1&tamanhoPagina=10
+Authorization: Bearer {{token}}
+Accept: application/json
+
+###
+
+### Atualizar pedido
+PUT {{GestaoPedido.API_HostAddress}}/api/pedido/00000000-0000-0000-0000-000000000010
+Authorization: Bearer {{token}}
+Content-Type: application/json
+Accept: application/json
+
+{
+  "data": "2025-06-22T15:00:00Z",
+  "status": "Aprovado",
+  "clienteId": "00000000-0000-0000-0000-000000000001",
+  "itens": [
+    {
+      "produtoId": "00000000-0000-0000-0000-000000000002",
+      "quantidade": 1,
+      "precoUnitario": 100
+    }
+  ]
+}
+
+###
+
+### Excluir pedido (físico)
+DELETE {{GestaoPedido.API_HostAddress}}/api/pedido/00000000-0000-0000-0000-000000000010
+Authorization: Bearer {{token}}
+Accept: application/json
+
+###
+
+### Excluir pedido (lógico)
+DELETE {{GestaoPedido.API_HostAddress}}/api/pedido/logical/00000000-0000-0000-0000-000000000010
+Authorization: Bearer {{token}}
+Accept: application/json
+
+###

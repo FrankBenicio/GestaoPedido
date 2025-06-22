@@ -1,0 +1,12 @@
+@GestaoPedido.API_HostAddress = https://localhost:7181
+### Autenticar usuário
+POST {{GestaoPedido.API_HostAddress}}/api/auth/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username": "admin",
+  "password": "123456"
+}
+
+###

@@ -1,0 +1,14 @@
+@GestaoPedido.API_HostAddress = https://localhost:7181
+
+### Criar usuário
+POST {{GestaoPedido.API_HostAddress}}/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username": "novousuario",
+  "password": "senha123",
+  "role": "Usuario"
+}
+
+###
