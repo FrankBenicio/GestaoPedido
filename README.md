@@ -66,8 +66,8 @@ Autenticação protegida com **JWT** (exceto login e criação de usuários).
 
 1. **Clone o repositório**  
    ```bash
-   git clone https://github.com/seu-usuario/seu-repo.git
-   cd seu-repo
+   git clone https://github.com/FrankBenicio/GestaoPedido.git
+   cd GestaoPedido
    ```
 
 2. **Crie o banco de dados**  
